@@ -1,0 +1,15 @@
+//
+//  Dev.xcconfig
+//  vgs-stripe-ios-example
+//
+//  Created by andrew.slepakurov on 10/10/18.
+//  Copyright © 2018 Very Good Security. All rights reserved.
+//
+STRIPE_REVERSE_KEY=<stripe_id_1>
+STRIPE_FORWARD_KEY=<stripe_id_2>
+PROXY_URL=<tenant_id>.SANDBOX.verygoodproxy.io
+PROXY_SCHEMA=https
+STRIPE_URL=/v1/tokens
+HTTPBIN_URL=/post
+PROXY_USER=<proxy_user>
+PROXY_PASS=<proxy_pass>
