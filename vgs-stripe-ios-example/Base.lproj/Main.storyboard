@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WOa-cj-yOn">
                                 <rect key="frame" x="16" y="70" width="343" height="214"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card Info - Reverse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUK-UL-lBb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUK-UL-lBb">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
                                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
@@ -32,13 +32,13 @@
                                         <rect key="frame" x="0.0" y="32" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4111111111111111" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPJ-H9-y9X" userLabel="creditCardNumber">
                                         <rect key="frame" x="0.0" y="70" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="cc-number"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01/2023" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUD-BG-SEd" userLabel="creditCardExpiration">
                                         <rect key="frame" x="0.0" y="108" width="343" height="30"/>
@@ -50,7 +50,7 @@
                                         <rect key="frame" x="0.0" y="146" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="tel"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofG-nd-T3L">
                                         <rect key="frame" x="0.0" y="184" width="343" height="30"/>
@@ -62,52 +62,38 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qTr-mI-HJa">
-                                <rect key="frame" x="16" y="292" width="343" height="252"/>
+                                <rect key="frame" x="16" y="299" width="343" height="182"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credit Card Info - Forward" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fK8-cM-b2d">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
-                                        <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="400" verticalHuggingPriority="400" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jpx-mJ-Tin" userLabel="fCreditCardName" colorLabel="IBBuiltInLabel-Green">
-                                        <rect key="frame" x="0.0" y="32" width="343" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="400" verticalHuggingPriority="400" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jpx-mJ-Tin" userLabel="fCreditCardName" colorLabel="IBBuiltInLabel-Green">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-kx-09H" userLabel="fCreditCardNumber">
-                                        <rect key="frame" x="0.0" y="70" width="343" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-kx-09H" userLabel="fCreditCardNumber">
+                                        <rect key="frame" x="0.0" y="38" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration Month Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OR0-Ug-0bk" userLabel="fCreditCardExpirationMonth">
-                                        <rect key="frame" x="0.0" y="108" width="343" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration Month Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OR0-Ug-0bk" userLabel="fCreditCardExpirationMonth">
+                                        <rect key="frame" x="0.0" y="76" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration Year Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccF-On-Y6m" userLabel="fCreditCardExpirationYear">
-                                        <rect key="frame" x="0.0" y="146" width="343" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration Year Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ccF-On-Y6m" userLabel="fCreditCardExpirationYear">
+                                        <rect key="frame" x="0.0" y="114" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cvv token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51L-OT-cmO" userLabel="fCreditCardCvv">
-                                        <rect key="frame" x="0.0" y="184" width="343" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cvv token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="51L-OT-cmO" userLabel="fCreditCardCvv">
+                                        <rect key="frame" x="0.0" y="152" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJl-LQ-RBU" userLabel="fSubmit">
-                                        <rect key="frame" x="0.0" y="222" width="343" height="30"/>
-                                        <state key="normal" title="Submit"/>
-                                        <connections>
-                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CqT-l3-Nxu"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -118,7 +104,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WOa-cj-yOn" secondAttribute="trailing" constant="16" id="Ifd-ll-gRO"/>
                             <constraint firstItem="qTr-mI-HJa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Jfr-Ez-INX"/>
                             <constraint firstItem="WOa-cj-yOn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="MrF-ss-MZ2"/>
-                            <constraint firstItem="qTr-mI-HJa" firstAttribute="top" secondItem="WOa-cj-yOn" secondAttribute="bottom" constant="8" id="O3f-N5-duO"/>
+                            <constraint firstItem="qTr-mI-HJa" firstAttribute="top" secondItem="WOa-cj-yOn" secondAttribute="bottom" constant="15" id="O3f-N5-duO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -132,7 +118,6 @@
                         <outlet property="fCreditCardExpirationYear" destination="ccF-On-Y6m" id="RTt-UI-dFH"/>
                         <outlet property="fCreditCardName" destination="Jpx-mJ-Tin" id="m8m-rO-eEr"/>
                         <outlet property="fCreditCardNumber" destination="aZn-kx-09H" id="DSV-QL-LNg"/>
-                        <outlet property="fSubmitButton" destination="QJl-LQ-RBU" id="T6G-EL-oZf"/>
                         <outlet property="submitButton" destination="ofG-nd-T3L" id="YBC-N6-n0b"/>
                     </connections>
                 </viewController>

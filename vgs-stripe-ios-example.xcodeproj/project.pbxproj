@@ -7,22 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00574443216FA7A300AA1DB3 /* cert.cer in Resources */ = {isa = PBXBuildFile; fileRef = 00574442216FA7A300AA1DB3 /* cert.cer */; };
 		AFEF603944DE1C6907E87FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEF6EB12403BAC3FAE41E16 /* Main.storyboard */; };
 		AFEF618215D7E78868934A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEF6943B93C4FD2CA28F1BD /* Assets.xcassets */; };
 		AFEF62926361E08C7CF06A10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF623B214938F6AAE95DF6 /* ViewController.swift */; };
 		AFEF63E58CD4320652698064 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF6EC0D1E5C53A10465E85 /* AppDelegate.swift */; };
 		AFEF67037BF31764417EFE0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEF6C3607A89DF6F6F3E4AE /* LaunchScreen.storyboard */; };
-		AFEF68752E7D0EE6F653E4A8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF663D41A71FFB1CE6967E /* SessionDelegate.swift */; };
 		AFEF6BFB9498DEA8ACFBAE95 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEF68CE5C81A5F97F9043AF /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00574442216FA7A300AA1DB3 /* cert.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = cert.cer; path = ../../../../cert.cer; sourceTree = "<group>"; };
 		00FAE0BE216E6321007E3B9B /* Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Dev.xcconfig; sourceTree = "<group>"; };
 		AFEF623B214938F6AAE95DF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFEF643A854D69FE063EB8CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AFEF663D41A71FFB1CE6967E /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
 		AFEF68CE5C81A5F97F9043AF /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		AFEF6943B93C4FD2CA28F1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFEF6994F9213661E915CA93 /* vgs-stripe-ios-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vgs-stripe-ios-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,8 +65,6 @@
 				AFEF6EB12403BAC3FAE41E16 /* Main.storyboard */,
 				AFEF623B214938F6AAE95DF6 /* ViewController.swift */,
 				AFEF68CE5C81A5F97F9043AF /* ApiService.swift */,
-				AFEF663D41A71FFB1CE6967E /* SessionDelegate.swift */,
-				00574442216FA7A300AA1DB3 /* cert.cer */,
 			);
 			path = "vgs-stripe-ios-example";
 			sourceTree = "<group>";
@@ -135,7 +129,6 @@
 			files = (
 				AFEF618215D7E78868934A93 /* Assets.xcassets in Resources */,
 				AFEF67037BF31764417EFE0D /* LaunchScreen.storyboard in Resources */,
-				00574443216FA7A300AA1DB3 /* cert.cer in Resources */,
 				AFEF603944DE1C6907E87FE7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,7 +143,6 @@
 				AFEF63E58CD4320652698064 /* AppDelegate.swift in Sources */,
 				AFEF62926361E08C7CF06A10 /* ViewController.swift in Sources */,
 				AFEF6BFB9498DEA8ACFBAE95 /* ApiService.swift in Sources */,
-				AFEF68752E7D0EE6F653E4A8 /* SessionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,8 @@
 	<string>$(HTTPBIN_URL)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>PROXY_SCHEMA</key>
-	<string>$(PROXY_SCHEMA)</string>
+	<key>URL_SCHEMA</key>
+	<string>$(URL_SCHEMA)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -52,13 +52,17 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>STRIPE_FORWARD_KEY</key>
-	<string>$(STRIPE_FORWARD_KEY)</string>
 	<key>PROXY_URL</key>
 	<string>$(PROXY_URL)</string>
-	<key>STRIPE_URL</key>
-	<string>$(STRIPE_URL)</string>
+	<key>STRIPE_BASE_URL</key>
+	<string>$(STRIPE_BASE_URL)</string>
 	<key>STRIPE_REVERSE_KEY</key>
 	<string>$(STRIPE_REVERSE_KEY)</string>
+	<key>STRIPE_TOKENS_URL</key>
+	<string>$(STRIPE_TOKENS_URL)</string>
+	<key>STRIPE_CHARGES_URL</key>
+	<string>$(STRIPE_CHARGES_URL)</string>
+	<key>FIREBASE_URL</key>
+	<string>$(FIREBASE_URL)</string>
 </dict>
 </plist>

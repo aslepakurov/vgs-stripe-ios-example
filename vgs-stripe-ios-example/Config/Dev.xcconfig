@@ -6,10 +6,10 @@
 //  Copyright © 2018 Very Good Security. All rights reserved.
 //
 STRIPE_REVERSE_KEY=<stripe_id_1>
-STRIPE_FORWARD_KEY=<stripe_id_2>
 PROXY_URL=<tenant_id>.SANDBOX.verygoodproxy.io
-PROXY_SCHEMA=https
-STRIPE_URL=/v1/tokens
+URL_SCHEMA=https
+STRIPE_BASE_URL=api.stripe.com
+STRIPE_TOKENS_URL=/v1/tokens
+STRIPE_CHARGES_URL=/v1/charges
 HTTPBIN_URL=/post
-PROXY_USER=<proxy_user>
-PROXY_PASS=<proxy_pass>
+FIREBASE_URL=<firebase_id>.firebaseio.com/credit_cards
