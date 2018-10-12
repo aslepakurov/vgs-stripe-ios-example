@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var creditCardExpiration: UITextField!
     @IBOutlet var creditCardCvv: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     //  Forward
     @IBOutlet var fCreditCardName: UITextField!
     @IBOutlet var fCreditCardNumber: UITextField!
@@ -53,6 +54,16 @@ class ViewController: UIViewController {
             let paramMap = ["card[number]": (creditCardNumber.text!), "card[exp_month]": String(expirationDateArr[0]), "card[exp_year]": String(expirationDateArr[1]), "card[cvc]": (creditCardCvv.text!)]
             ApiService.callPost(url: URL(string: schemaUrl + "://" + tenantUrl + httpBinUrl)!, payload: ApiService.getPostString(params: paramMap), finish: finishPostTokenize)
             ApiService.callPost(url: URL(string: schemaUrl + "://" + stripeBaseUrl + stripeTokenUrl)!, payload: ApiService.getPostString(params: paramMap), credentials: base64CredentialsReverse, finish: finishPostStripeToken)
+        } else if sender === clearButton {
+            self.creditCardName.text = ""
+            self.creditCardNumber.text = ""
+            self.creditCardExpiration.text = ""
+            self.creditCardCvv.text = ""
+            self.fCreditCardName.text = ""
+            self.fCreditCardNumber.text = ""
+            self.fCreditCardExpirationMonth.text = ""
+            self.fCreditCardExpirationYear.text = ""
+            self.fCreditCardCvv.text = ""
         }
     }
 
@@ -60,11 +71,11 @@ class ViewController: UIViewController {
         if let json = (try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)) as? [String: Any] {
             if let form = json["form"] as? [String: String] {
                 DispatchQueue.main.async {
-                    self.fCreditCardCvv.text = form["card[cvc]"]!
-                    self.fCreditCardNumber.text = form["card[number]"]!
                     self.fCreditCardName.text = self.creditCardName.text
+                    self.fCreditCardNumber.text = form["card[number]"]!
                     self.fCreditCardExpirationMonth.text = form["card[exp_month]"]!
                     self.fCreditCardExpirationYear.text = form["card[exp_year]"]!
+                    self.fCreditCardCvv.text = form["card[cvc]"]!
                 }
             }
         }
@@ -97,7 +108,7 @@ class ViewController: UIViewController {
                 }
                 let payload = "{\"credit_card_number\":\"\(self.fCreditCardNumber.text ?? "")\", \"credit_card_expiration_month\": \"\(self.fCreditCardExpirationMonth.text ?? "")\", " +
                         "\"credit_card_expiration_year\": \"\(self.fCreditCardExpirationYear.text ?? "")\", \"credit_card_cvv\": \"\(self.fCreditCardCvv.text ?? "")\", " +
-                        "\"credit_card_name\": \"\(self.fCreditCardName.text ?? "")\"}"
+                        "\"credit_card_name\": \"\(self.fCreditCardName.text ?? "")\", \"timestamp\" : " + String(Date().ticks) + "}"
                 ApiService.callPost(url: URL(string: schemaUrl + "://" + firebaseUrl + "/credit_cards/" + self.fCreditCardNumber.text! + ".json")!, payload: payload, finish: finishPrint)
             }
         }
@@ -115,3 +126,8 @@ class ViewController: UIViewController {
     }
 }
 
+extension Date {
+    var ticks: UInt64 {
+        return UInt64((self.timeIntervalSince1970 + 62_135_596_800) * 10_000_000)
+    }
+}
