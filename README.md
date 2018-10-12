@@ -16,7 +16,7 @@
 1. Create account on Stripe
 2. Generate Stripe sandbox API key (https://dashboard.stripe.com/account/apikeys)
 3. Create Firebase project and create a database in `test mode`
-4. Copy database identifier.
+4. Visit settings and copy `Project ID`.
 
 ## Run application
 1. Clone repository and go to project directory
